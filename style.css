@@ -1,0 +1,55 @@
+body {
+    background-color: #FF99C8;
+    color: aliceblue;
+    font-family: 'Lilita One';
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    display: flex;
+    font-size: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container {
+    width: auto;
+    background-color: aliceblue;
+    outline: solid 1px black; 
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(16, 35px);
+    grid-template-rows: repeat(16, 35px);
+    flex-direction: column;
+}
+
+.buttons {
+    flex-direction: row;
+    
+}
+
+#black, #color, #clear {
+    width: auto;
+    padding: 1rem;
+    color: #BE7CFF;
+    font-family: 'Lilita One';
+    font-size: 24px;
+    border-radius: 15px;
+}
+
+#black {
+    background-color: #FCF6BD;
+}
+
+#color {
+    background-color: #A9DEF9;
+}
+
+#clear {
+    background-color: #D0F4DE;
+}
+
