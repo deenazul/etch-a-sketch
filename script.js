@@ -2,39 +2,41 @@ const containerDiv = document.querySelector('.container');
 const blackBtn = document.querySelector('#black');
 const colorBtn = document.querySelector('#color');
 const clearBtn = document.querySelector('#clear');
+let color = 'black';
 
+// create 16x16 grid and use css for grid template
 let createGrid = () => {
     for (let i=0; i < 256; i++){
         const grid = document.createElement('div');
-        grid.addEventListener("mouseover", function() {
-            grid.style.backgroundColor = "black"
-        });
+        grid.addEventListener("mouseover", colorGrid(color))
         containerDiv.appendChild(grid);
-        console.log(containerDiv)
     }
 }
-
+// select all grid and turn to white on click
 let resetContainer = () => {
     let container = document.querySelector('.container')
     let divs = container.querySelectorAll("div")
     divs.forEach((div) => div.style.backgroundColor = "white")
 }
 
-// let colorGrid = () => {
-//     if (color == "pink"){
-
-//         // document.body.querySelectorAll('.container').querySelector('div').style.backgroundColor= 'pink'
-//     }
-//     else {
-//         // document.grid.style.backgroundColor = 'black'
-//         document.body.querySelectorAll('.container').querySelectorAll('div').style.backgroundColor = 'black'
-
-//     }
-// }
-
-// let setColor = (colorChoice) => {
-//     color = colorChoice;
-// }
+let colorGrid = (color) => {
+    let divs = document.querySelectorAll('.container > div')
+    // go thru each div
+    divs.forEach((item) => {
+        if (color == 'color'){
+            // when 1 item has event, the target event will change backgroundcolor
+            item.addEventListener('mouseenter', (e) => {
+                e.target.style.backgroundColor = 'blue';
+            })
+        }
+        else {
+            item.addEventListener('mouseenter', (e) => {
+                e.target.style.backgroundColor = 'black';
+            })
+        }
+    })
+}
 
 createGrid();
 resetContainer();
+colorGrid(color);
