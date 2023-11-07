@@ -5,8 +5,12 @@ const clearBtn = document.querySelector('#clear');
 let color = 'black';
 
 // create 16x16 grid and use css for grid template
-let createGrid = () => {
-    for (let i=0; i < 256; i++){
+let createGrid = (size) => {
+    size = prompt("Enter binary number from 16-32");
+    containerDiv.style.gridTemplateColumns = `repeat(${size},1fr)`
+    containerDiv.style.gridTemplateRows = `repeat(${size},1fr)`
+
+    for (let i=0; i < size*size; i++){
         const grid = document.createElement('div');
         grid.addEventListener("mouseover", colorGrid(color))
         containerDiv.appendChild(grid);

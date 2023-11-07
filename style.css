@@ -5,9 +5,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-h1 {
+header {
     display: flex;
-    font-size: 80px;
+    font-size: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -17,19 +17,25 @@ h1 {
     align-items: center;
 }
 .container {
-    width: auto;
+    display: grid;
+    width: 500px;
+    height: 500px;
     background-color: aliceblue;
     outline: solid 1px black; 
-    border-radius: 15px;
-    display: grid;
-    grid-template-columns: repeat(16, 35px);
-    grid-template-rows: repeat(16, 35px);
     flex-direction: column;
+}
+
+.contentBtn {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons {
     flex-direction: row;
-    
+    display: flex;
+    gap: 1rem;
 }
 
 #black, #color, #clear {

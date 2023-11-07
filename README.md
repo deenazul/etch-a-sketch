@@ -6,3 +6,5 @@ Firstly, I used:
 this.style.background = color;
 but it didn't change. Then I changed this into document.querySelector('.container').grid.style.backgroundColor and it didn't work.
 Until I found out how to use ForEach to go through the grid item one by one.
+
+7/11: add size input, fix ui
